@@ -1,0 +1,17 @@
+# Secrets
+.ssh/id_*
+.ssh/known_hosts*
+.config/gh/hosts.yml
+
+# Claude
+.claude.json*
+
+# State / generated
+.zsh_history
+.zsh_sessions/
+*_history
+*.zwc
+.zcompdump*
+.DS_Store
+.RData
+.Rhistory
