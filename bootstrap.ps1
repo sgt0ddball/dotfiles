@@ -4,13 +4,18 @@ $DOTFILES = "$HOME\dotfiles"
 $wtPath = (Get-ChildItem "$env:LOCALAPPDATA\Packages" -Filter "Microsoft.WindowsTerminal_*" | Select-Object -First 1).FullName
 
 $links = @{
-  "$wtPath\LocalState\settings.json" = "$DOTFILES\windows\terminal\settings.json"
-  "$env:USERPROFILE\.glaze-wm\config.yaml" = "$DOTFILES\windows\glazewm\config.yaml"
+  "$env:USERPROFILE\.glzr\glazewm\config.yaml" = "$DOTFILES\glazewm\config.yaml"
+  "$env:USERPROFILE\.glzr\zebar" = "$DOTFILES\zebar"
 }
 
 foreach ($target in $links.Keys) {
   $source = $links[$target]
-  if (Test-Path $target) { Remove-Item $target }
+  $parentDir = Split-Path $target -Parent
+  if (-not (Test-Path $parentDir)) {
+    New-Item -ItemType Directory -Force -Path $parentDir | Out-Null
+    Write-Host "Created directory $parentDir"
+  }
+  if (Test-Path $target) { Remove-Item $target -Recurse -Force }
   New-Item -ItemType SymbolicLink -Path $target -Target $source
   Write-Host "Linked $target"
 }
