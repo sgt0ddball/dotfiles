@@ -1,6 +1,6 @@
 general:
   startup_commands:
-    - 'shell-exec C:/Program\ Files/glzr.io/Zebar/zebar.exe'
+    - 'shell-exec C:/Program Files/glzr.io/Zebar/zebar.exe'
     - 'shell-exec powershell -ExecutionPolicy Bypass -File %USERPROFILE%\dotfiles\glazewm\startup.ps1'
   shutdown_commands: ['shell-exec taskkill /IM zebar.exe /F']
   config_reload_commands: []

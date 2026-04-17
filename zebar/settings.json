@@ -5,6 +5,11 @@
       "pack": "starter",
       "widget": "with-glazewm",
       "preset": "default"
+    },
+    {
+      "pack": "blaiyz.neosoft-zebar",
+      "widget": "default",
+      "preset": "default"
     }
   ]
 }
