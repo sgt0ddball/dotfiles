@@ -1,1 +1,6 @@
 [2m2026-04-17T02:03:32.545964Z[0m [31mERROR[0m [2mzebar::sys_tray[0m[2m:[0m Error handling menu event: HTML file not found at './dist/index.html' for config 'C:\Users\RW\dotfiles\zebar\boilerplate-solid-ts\zpack.json'.
+[2m2026-04-17T02:28:15.865964Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'blaiyz.neosoft-zebar'.
+[2m2026-04-17T02:33:57.795142Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'blaiyz.neosoft-zebar'.
+[2m2026-04-17T02:38:14.201991Z[0m [31mERROR[0m [2mzebar::sys_tray[0m[2m:[0m Error handling menu event: No widget pack found for 'neoSoft'.
+[2m2026-04-17T02:50:53.325921Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'blaiyz.neosoft-zebar'.
+[2m2026-04-17T03:04:14.027605Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'blaiyz.neosoft-zebar'.
