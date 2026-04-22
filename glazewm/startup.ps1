@@ -2,7 +2,7 @@
 Start-Sleep -Seconds 2
 
 # Workspace 1: Chrome
-Start-Process "chrome"
+Start-Process "brave"
 Start-Sleep -Milliseconds 500
 
 # Workspace 2: File Explorer
@@ -26,6 +26,6 @@ Start-Process "signal"
 Start-Sleep -Milliseconds 500
 
 # Workspace 9: Obsidian & Todoist
-Start-Process "obsidian"
+Start-Process "Obsidian"
 Start-Sleep -Milliseconds 500
 Start-Process "todoist"

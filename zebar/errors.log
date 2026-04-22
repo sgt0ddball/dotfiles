@@ -4,3 +4,5 @@
 [2m2026-04-17T02:38:14.201991Z[0m [31mERROR[0m [2mzebar::sys_tray[0m[2m:[0m Error handling menu event: No widget pack found for 'neoSoft'.
 [2m2026-04-17T02:50:53.325921Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'blaiyz.neosoft-zebar'.
 [2m2026-04-17T03:04:14.027605Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'blaiyz.neosoft-zebar'.
+[2m2026-04-17T03:35:37.467776Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'blaiyz.neosoft-zebar'.
+[2m2026-04-17T03:41:31.376475Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'RW-Edit_neosoft-zebar'.

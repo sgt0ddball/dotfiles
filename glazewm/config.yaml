@@ -14,18 +14,19 @@ general:
 
 gaps:
   scale_with_dpi: true
-  inner_gap: '5px'
+  inner_gap: '13px'
   outer_gap:
-    top: '45px'
-    right: '5px'
+    top: '10px'
+    right: '7px'
     bottom: '5px'
-    left: '5px'
+    left: '10px'
 
 window_effects:
   focused_window:
     border:
       enabled: true
-      color: '#8dbcff'
+      color: '#01fdfe'
+      width: 20px   
     hide_title_bar:
       enabled: false
     corner_style:
@@ -290,3 +291,5 @@ keybindings:
     bindings: ['alt+shift+8']
   - commands: ['move --workspace 9', 'focus --workspace 9']
     bindings: ['alt+shift+9']
+  - commands: ['move --workspace 10', 'focus --workspace 10']
+    bindings: ['alt+shift+0']
