@@ -1,5 +1,11 @@
 # bootstrap.ps1 — run as Administrator
-$DOTFILES = "$HOME\dotfiles"
+# Configs managed by this script:
+#   - glazewm/config.yaml    -> %USERPROFILE%\.glzr\glazewm\config.yaml
+#   - zebar/                 -> %USERPROFILE%\.glzr\zebar
+#   - starship/starship.toml -> %USERPROFILE%\.config\starship.toml
+# If you add a new config here, add it to bootstrap.sh too.
+
+$DOTFILES = "$env:USERPROFILE\dotfiles"
 
 # --- Git: clone or pull ---
 if (-not (Test-Path $DOTFILES)) {
@@ -29,4 +35,28 @@ foreach ($target in $links.Keys) {
   Write-Host "Linked $target"
 }
 
-Write-Host "Bootstrap complete."
+# --- Install Chocolatey if not present ---
+if (-not (Get-Command choco -ErrorAction SilentlyContinue)) {
+  Write-Host "Installing Chocolatey..."
+  Set-ExecutionPolicy Bypass -Scope Process -Force
+  [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
+  Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+} else {
+  Write-Host "Chocolatey already installed, skipping."
+}
+
+# --- Install Starship if not present ---
+if (-not (Get-Command starship -ErrorAction SilentlyContinue)) {
+  Write-Host "Installing Starship..."
+  choco install starship -y
+} else {
+  Write-Host "Starship already installed, skipping."
+}
+
+# --- Winget: restore apps ---
+$wingetFile = "$DOTFILES\winget\apps.json"
+if (Test-Path $wingetFile) {
+  Write-Host "Restoring apps via winget..."
+  winget import -i $wingetFile --accept-package-agreements --accept-source-agreements
+} else {
+  Write-Host "No winget ap
